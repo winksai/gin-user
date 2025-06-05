@@ -14,7 +14,7 @@ func (o *OrderService) Create() {
 	o.dao.CreateOrder()
 }
 
-func NewOrderService(dao *dao.OrderDao) *OrderService {
+func NewOrderService(dao *dao.OrderDao) IOrderService {
 	return &OrderService{
 		dao: dao,
 	}
